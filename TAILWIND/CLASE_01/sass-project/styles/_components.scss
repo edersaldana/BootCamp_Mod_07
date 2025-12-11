@@ -1,0 +1,46 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+body {
+  font-family: $font-main;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: $radius;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    color: $primary;
+  }
+
+  p {
+    font-size: 14px;
+    color: "#444";
+  }
+
+  button {
+    @include button($primary);
+    margin-top: 10px;
+  }
+}
+
+.btn-danger {
+  @include button(red);
+}
+
+.btn-primary {
+  @include button(blue);
+}
+
+.btn-warning {
+  @include button(yellow);
+  color: black;
+}
+
+@media (max-width: $sm) {
+  body {
+    background-color: green;
+  }
+}

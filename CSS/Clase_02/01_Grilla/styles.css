@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.grilla {
+    display: grid;
+    grid-template-areas:
+        "nav header header"
+        "nav products aside"
+        "nav services aside"
+        "nav footer footer";
+
+    grid-template-columns: 20% auto 15%;
+    grid-template-rows: 100px 1fr 1fr 75px;
+}
+
+.header {
+    grid-area: header;
+    background-color: red;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: greenyellow;
+}
+
+.products {
+    grid-area: products;
+    background-color: gray;
+}
+
+.services {
+    grid-area: services;
+    background-color: blue;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: orange;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: yellow;
+}

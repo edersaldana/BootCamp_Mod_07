@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.grilla {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "hero hero hero"
+        "menu main main"
+        "menu banner banner"
+        "menu extra image";
+
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-rows: 3fr 22fr 22fr 10fr 16fr;
+}
+
+
+.header {
+    grid-area: header;
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+}
+
+.hero {
+    grid-area: hero;
+    background-color: skyblue;
+    color: white;
+    text-align: center;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+.main {
+    grid-area: main;
+    background-color: violet;
+    color: white;
+    text-align: center;
+}
+
+.banner {
+    grid-area: banner;
+    background-color: orange;
+    color: white;
+    text-align: center;
+}
+
+.extra {
+    grid-area: extra;
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+
+.image {
+    grid-area: image;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}

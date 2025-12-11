@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tailwindcss-practice</title>
+    <link rel="stylesheet" href="./src/style.css"/>
+  </head>
+  <body>
+    <main>
+      <nav class="bg-gray-900 text-white px-6 py-4 flex justify-between">
+        <h1 class="text-xl font-semibold"> Usando Tailwindcss</h1>
+        <ul>
+          <li><a class="hover:text-gray-300 cursor-pointer">Home</a> </li>
+          <li><a class="hover:text-gray-300 cursor-pointer">About</a> </li>
+          <li><a class="hover:text-gray-300 cursor-pointer">Contact</a> </li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-3 bg-yellow-100 border-l-4 border-yellow-500 p-4 rounded-r-2xl">
+        <span>Attetion</span>
+        <p>Este es un mensaje de alerta</p>
+      </div>
+
+
+      <div class="flex justify-center items-center min-h-screen bg-gray-200">
+        <div class="bg-white rounded-xl shadow-md p-35 flex flex-col items-center w-100">
+          <img 
+            src="assets/images.png" 
+            alt="Perfil" 
+            class="w-32 h-32 rounded-full object-cover mb-4"
+          />
+          
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">Nombre del Estudiante</h2>
+          <p class="text-gray-500 text-sm mb-8">Descripción breve</p>
+
+          <button class="bg-blue-600 text-white px-8 py-4 rounded hover:bg-blue-700 transition">
+            Seguir
+          </button>
+        </div>
+      </div>
+
+      
+
+    </main>
+  </body>
+</html>
