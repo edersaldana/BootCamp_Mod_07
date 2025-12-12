@@ -31,7 +31,7 @@ export const Header = () => {
       </div>
 
       {openCart && (
-        <div className="absolute right-5 top-14 max-w-[290px] bg-white text-black border border-gray-950/30 h-fit rounded-lg flex flex-col gap-6 p-3">
+        <div className="absolute right-5 top-14 max-w-[400px]  bg-white text-black border border-gray-950/30 h-fit rounded-lg flex flex-col gap-5 p-6">
           {cart.map((product) => (
             <div key={product.id} className="flex items-center gap-4">
               <img
@@ -41,10 +41,15 @@ export const Header = () => {
               />
               <h3 className="text-xs">{product.title}</h3>
 
+              <div className="flex items-center gap-4">
+                <p className="flex text-center">
+                  Price: {(product.price * product.quantity).toFixed(2)}
+                </p>
+              </div>
 
               <p className="flex text-center text-">Cantidad: {product.quantity}</p>
 
-              <div className="absolute right-10 top-16 w-[80px] h-[20px] rounded-lg bg-gray-300 border border-gray-200 flex items-center justify-between px-2">
+              <div className="absolute right-12 top-18 w-22 h-5 rounded-lg bg-gray-300 border border-gray-200 flex items-center justify-between px-2">
                 <button
                   onClick={() => addOne(product.id)}
                   className="w-4 h-4 rounded-full border border-gray-100 text-blue-600 flex items-center justify-center text-sm">
@@ -57,7 +62,7 @@ export const Header = () => {
                   -
                 </button>
               </div>
-              
+
               <button onClick={() => removeProduct(product.id)} className="text-red-500"><Trash size={20} /></button>
             </div>
           ))}
